@@ -1,4 +1,4 @@
-const searchbar = document.querySelector(".searchbar-containe");
+const searchbar = document.querySelector(".searchbar-container");
 const profilecontainer= document.querySelector(".profile-container");
 
 const url = "https://api.github.com/users/";
@@ -16,10 +16,13 @@ const bio = document.getElementById("bio");
 const repos = document.getElementById("repos");
 const followers = document.getElementById("followers");
 const followings= document.getElementById("followings");
-const location = document.getElementById("location");
+const user_location = document.getElementById("location");
 const page = document.getElementById("page");
 const twitter =document.getElementById("twitter");
 const company = document.getElementById("company");
+
+let darkMode= false;
+
 
 //event listners
 
@@ -42,3 +45,34 @@ input.addEventListener("keydown", function(e){
 input.addEventListener("input", function(){
     noresult.style.display="none";
 });
+
+
+ 
+btnmode.addEventListener("click", function r(){
+
+    
+    if(darkMode==false){
+        darkModeProperties();
+    }
+    else{
+        lightModeProperties();
+    }
+});
+
+//api call
+
+async function getuserdate(gitUrl){
+    
+    try {
+        const response=await fetch(gitUrl);
+     
+         const data = await response.json();
+     
+         console.log(data);
+         updateProfile(data);
+        
+} catch (error) {
+    console.log("error found" +  error);
+
+}
+}
