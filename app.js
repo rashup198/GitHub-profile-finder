@@ -76,7 +76,7 @@ async function getuserdate(gitUrl) {
 }
 
 
-// render
+// render update proflile
 function updateProfile(data) {
     if (data.message !== "Not Found") {
         noresult.style.display = "none";
