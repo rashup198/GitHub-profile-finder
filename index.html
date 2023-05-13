@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Roboto+Mono:wght@600&display=swap"
         rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/f1a8c6f477.js" crossorigin="anonymous"></script>
+
 <body>
 
     <div class="wrapper">
@@ -118,6 +120,10 @@
                                         </div>
                                         <p id="company"></p>
                                     </div>
+
+                                    <button onclick="openModal()" class="btn">
+                                        <div>Share Profile</div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -126,6 +132,47 @@
             </div>
         </main>
     </div>
+
+
+
+
+    <!-- MODAL -->
+
+    <div class="modal">
+
+        <div class="modal-header">
+            <h1>Share Profile</h1>
+
+            <div class="">
+                <img src="image/cross-small-svgrepo-com.svg" onclick="closeModal()" alt="" class="at">
+            </div >
+        </div>
+
+        <div class="">
+
+            <h3>Share this via</h3>
+
+
+            <div class="icon-container">
+                <a href="https://www.facebook.com/" target="_blank" class="icon" id="facebook" rel="noopener noreferrer"><img src="image/facebook-svgrepo-com.svg" alt=""></a>
+
+                <a href="https://www.whatsapp.com/" target="_blank" class="icon" id="whatsapp" rel="noopener noreferrer"><img src="image/whatsapp-svgrepo-com.svg" alt=""></a>
+
+                <a href="https://www.instagram.com/" target="_blank" class="icon" id="instagram" rel="noopener noreferrer"><img src="image/instagram-1-svgrepo-com.svg" alt=""></a>
+
+                <a href="https://web.telegram.org/" target="_blank" class="icon" id="telegram" rel="noopener noreferrer"><img src="image/telegram-svgrepo-com.svg" alt=""></a>
+
+                <a href="https://www.twitter.com/" target="_blank" class="icon" id="twitter" rel="noopener noreferrer"><img src="image/twitter-color-svgrepo-com.svg" alt=""></a>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- overlay -->
+
+    <div class="overlay" onclick="closeModal()"></div>
+
 
     <script src="app.js"></script>
 </body>
