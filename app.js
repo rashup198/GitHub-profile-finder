@@ -23,6 +23,9 @@ const page = document.getElementById("page");
 const twitter = document.getElementById("twitter");
 const company = document.getElementById("company");
 
+const modal= document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+
 let darkMode = false;
 
 
@@ -178,3 +181,16 @@ function init(){
 
 init();
 
+//modal open fucntion
+
+const openModal=()=>{
+    modal.classList.add("active");
+    overlay.classList.add("overlayactive");
+};
+
+// modal close function
+
+const closeModal=()=>{
+    modal.classList.remove("active");
+    overlay.classList.remove("overlayactive");
+};
