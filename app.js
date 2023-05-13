@@ -115,4 +115,26 @@ function updateProfile(data) {
     }
 }   
 
+function init(){
+    darkMode =false;
+
+    const value = localStorage.getItem("dark-mode");
+
+    if(value ==null){
+        console.log("null hai bhai");
+        localStorage.setItem("dark-mode", darkMode);
+        lightModeProperties();
+    }
+    else if(value == "true"){
+        console.log("true hai bhai");
+        darkModeProperties();
+    }
+    else{
+        lightModeProperties();
+    }
+
+    getuserdate(url+"rashup198");
+}
+
+init();
 
