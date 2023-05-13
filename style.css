@@ -7,10 +7,23 @@
     font-family: 'Roboto Mono', monospace;
 }
 
-body {
-    background-color: aliceblue;
+:root {
+    --lm-bg: #f6f8ff;
+    --lm-bg-content: #fefefe;
+    --lm-text: hwb(217 29% 39%);
+    --lm-text-alt: #2b3442;
+    --lm-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+    --lm-shadow-inactive: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
+    --lm-icon-bg: brightness(100%);
+    /* Btn */
+    --btn: #0079ff;
+    --btn-hover: #60abff;
+}
 
-    color: hwb(217 29% 39%);
+body {
+    background-color: var(--lm-bg);
+
+    color: var(--lm-text);
     width: 100%;
     position: relative;
     height: 100vh;
@@ -52,7 +65,7 @@ header #btn-mode {
     align-items: center;
     width: 90px;
     letter-spacing: 2.5px;
-    color: hwb(217 29% 39%);
+    color: var(--lm-text);
     font-weight: bold;
 }
 
@@ -65,7 +78,7 @@ header #btn-mode {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    
+
 }
 
 #btn-mode:hover {
@@ -75,9 +88,9 @@ header #btn-mode {
 .searchbar-container {
     width: 170%;
     position: relative;
-    background-color: #fefefe;
+    background-color: var(--lm-bg-content);
     border-radius: 15px;
-    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+    box-shadow: var(--lm-shadow);
     display: flex;
     height: 100%;
     padding: 6px;
@@ -95,13 +108,13 @@ header #btn-mode {
     width: 80%;
     outline: none;
     background: none;
-    color: hwb(217 29% 39%);
+    color: var(--lm-text);
     padding-left: 50px;
 
 }
 
 #input::placeholder {
-    color: hwb(217 29% 39%);
+    color: var(--lm-text);
     letter-spacing: -0.5px;
     font-size: 17px;
 }
@@ -115,7 +128,7 @@ header #btn-mode {
 .btn-search {
     min-width: 84px;
     padding: 14px 15px;
-    background-color: #0079ff;
+    background-color: var(--btn);
     border: none;
     border-radius: 10px;
     color: rgb(255, 255, 255);
@@ -125,7 +138,7 @@ header #btn-mode {
 
 .btn-search:hover {
     cursor: pointer;
-    background-color: #4091ef;
+    background-color: var(--btn-hover)
 }
 
 .btn-search:active {
@@ -141,14 +154,15 @@ header #btn-mode {
 .profile_wrapper2 {
     width: 172%;
 
-    background-color: #fefefe;
+    background-color: var(--lm-bg-content);
     border-radius: 15px;
-    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+    box-shadow: var(--lm-shadow);
+
 }
 
 .profile-container {
 
-    background-color: #fefefe;
+    background-color: var(--lm-bg-content);
     border-radius: 15px;
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
     display: flex;
@@ -167,6 +181,7 @@ header #btn-mode {
 }
 
 .profile-name {
+    margin-right: 20px;
     margin-top: 20px;
     padding: 5px;
     display: flex;
@@ -178,7 +193,7 @@ header #btn-mode {
 }
 
 .profile-name h2 {
-    color: black;
+    color: var(--lm-tex);
     font-weight: bold;
 }
 
@@ -195,7 +210,7 @@ header #btn-mode {
 
 #user {
     font-size: 20px;
-    color: #0079ff;
+    color: var(--btn);
     text-decoration-style: none;
     font-family: monospace;
 }
@@ -214,7 +229,7 @@ header #btn-mode {
 .profile-stats-wrapper {
     display: flex;
     height: 50px;
-    background-color: #f6f8ff;
+    background-color: var(--lm-bg);
     text-align: center;
     border-radius: 10px;
     padding: 18px;
@@ -227,12 +242,13 @@ header #btn-mode {
 .stat-title {
     font-size: 14px;
     font-family: monospace;
+    color: var(--lm-text-alt);
 }
 
 .stat-value {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
-    color: black;
+    color: var(--lm-tex);
     margin-top: 10px;
 }
 
@@ -244,14 +260,43 @@ header #btn-mode {
     gap: 16px 0;
     margin: 20px;
 }
-.profile-info{
+
+.profile-info {
     width: 50%;
     display: flex;
     gap: 14px;
     align-items: center;
-  
-    
+
+
+
 }
-.profile-info a{
+
+.profile-info a {
     word-break: break-all;
 }
+
+#twitter {
+    font-size: 17px;
+    color: var(--lm-tex);
+    font-family: monospace;
+}
+
+#company {
+    font-size: 17px;
+    color: var(--lm-tex);
+    font-family: monospace;
+}
+
+#page {
+    font-size: 17px;
+    color: var(--lm-tex);
+    font-family: monospace;
+}
+
+#location {
+    font-size: 17px;
+    color: var(--lm-tex);
+    font-family: monospace;
+color:#6e747d;
+}
+
