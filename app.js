@@ -8,8 +8,9 @@ const modeicon = document.getElementById("mode-icon");
 const input = document.getElementById("input");
 const noresult = document.getElementById("no-result");
 const btnsubmit = document.getElementById("submit");
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const avatar = document.getElementById("avatar");
-const name = document.getElementById("name");
+const username = document.getElementById("name");
 const date = document.getElementById("date");
 const user = document.getElementById("user");
 const bio = document.getElementById("bio");
@@ -93,9 +94,12 @@ function updateProfile(data) {
         }
 
         avatar.src =`${data.avatar_url}`
+        username.innerText = data.name === null ? data.login : data.name
         user.innerText = `@${data.login}`;
+        datesegments = data.created_at.split("T").shift().split("-");
+        date.innerText = `Joined ${datesegments[2]} ${months[datesegments[1] - 1]} ${datesegments[0]}`;
         user.herf =`${data.html_url}`;
-        date.innerText = `Joined ${data.created_at}`
+       
         bio.innerText= data.bio==null ? "This profile has no bio" : `${data.bio}`
         repos.innerText =`${data.public_repos}`;
         followers.innerText = `${data.followers}`;
