@@ -1,13 +1,15 @@
-*,*::before,*::after{
-padding: 0;
-margin: 0;
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
 
-font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
 }
 
-body{
+body {
     background-color: aliceblue;
-    
+
     color: hwb(217 29% 39%);
     width: 100%;
     position: relative;
@@ -26,24 +28,24 @@ body{
 
 } */
 
-header{
-    top: 17%;
-    left: 50%;
+header {
+    top: 5%;
+    left: 49%;
     transform: translate(-50%, -50%);
     position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    width: 600px;
-    gap:100px
+    width: 800px;
+    gap: 100px
 }
 
-header h1{
+header h1 {
     font-size: 35px;
 }
- 
-header #btn-mode{
+
+header #btn-mode {
     font-size: 20px;
     display: flex;
     justify-content: space-between;
@@ -54,24 +56,202 @@ header #btn-mode{
     font-weight: bold;
 }
 
-#app{
+#app {
     width: 427px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     gap: 40px;
+    
 }
 
-#btn-mode:hover{
+#btn-mode:hover {
     cursor: pointer;
 }
 
 .searchbar-container {
+    width: 170%;
     position: relative;
     background-color: #fefefe;
-    border: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+    display: flex;
+    height: 100%;
+    padding: 6px;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(image/search-icon.svg);
+    background-repeat: no-repeat;
+    background-position-x: 24px;
+    background-position-y: center;
+    background-size: 20px;
+}
+
+#input {
+    border: none;
+    width: 80%;
+    outline: none;
+    background: none;
+    color: hwb(217 29% 39%);
+    padding-left: 50px;
+
+}
+
+#input::placeholder {
+    color: hwb(217 29% 39%);
+    letter-spacing: -0.5px;
+    font-size: 17px;
+}
+
+.searchbar-container img {
+    height: 20px;
+    width: 20px;
+    padding: 0 10px 0px 16px;
+}
+
+.btn-search {
+    min-width: 84px;
+    padding: 14px 15px;
+    background-color: #0079ff;
+    border: none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-search:hover {
+    cursor: pointer;
+    background-color: #4091ef;
+}
+
+.btn-search:active {
+    transform: scale(0.975);
+}
+
+#no-result {
+    padding-right: 10px;
+    color: red;
+    width: 200px;
+}
+
+.profile_wrapper2 {
+    width: 172%;
+
+    background-color: #fefefe;
+    border-radius: 15px;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+}
+
+.profile-container {
+
+    background-color: #fefefe;
+    border-radius: 15px;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+    display: flex;
+    flex-direction: row;
+    gap: 50px
+}
+
+.photo img {
+
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+
+}
+
+.profile-name {
+    margin-top: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+
+
+}
+
+.profile-name h2 {
+    color: black;
+    font-weight: bold;
+}
+
+.profile-name p {
+    margin-top: 7px;
+    font-size: 15px;
+    font-weight: none;
+    font-family: monospace;
+}
+
+.user-section {
+    padding-top: 20px;
+}
+
+#user {
+    font-size: 20px;
+    color: #0079ff;
+    text-decoration-style: none;
+    font-family: monospace;
+}
+
+#bio {
+    margin-top: 30px;
+    width: 300px;
+    height: 70px;
+    max-height: 100px;
+    font-family: monospace;
+    font-size: 15px;
+    color: rgb(157, 157, 157);
+    letter-spacing: 0.7px;
+}
+
+.profile-stats-wrapper {
+    display: flex;
+    height: 50px;
+    background-color: #f6f8ff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 18px;
+    justify-content: space-between;
+    margin: 20px;
+
+
+}
+
+.stat-title {
+    font-size: 14px;
+    font-family: monospace;
+}
+
+.stat-value {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    color: black;
+    margin-top: 10px;
+}
+
+.profile-bottom-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px 0;
+    margin: 20px;
+}
+.profile-info{
+    width: 50%;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  
     
+}
+.profile-info a{
+    word-break: break-all;
 }
