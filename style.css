@@ -1,6 +1,77 @@
 *,*::before,*::after{
 padding: 0;
 margin: 0;
-font-family: 'Balsamiq Sans', cursive;
+
 font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    background-color: aliceblue;
+    
+    color: hwb(217 29% 39%);
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+
+/* .wrapper{
+    width: 427px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+} */
+
+header{
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 600px;
+    gap:100px
+}
+
+header h1{
+    font-size: 35px;
+}
+ 
+header #btn-mode{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90px;
+    letter-spacing: 2.5px;
+    color: hwb(217 29% 39%);
+    font-weight: bold;
+}
+
+#app{
+    width: 427px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#btn-mode:hover{
+    cursor: pointer;
+}
+
+.searchbar-container {
+    position: relative;
+    background-color: #fefefe;
+    border: 15px;
+    
 }
