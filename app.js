@@ -2,6 +2,7 @@ const searchbar = document.querySelector(".searchbar-container");
 const profilecontainer = document.querySelector(".profile-container");
 
 const url = "https://api.github.com/users/";
+const root = document.documentElement.style;
 const btnmode = document.getElementById("btn-mode");
 const modetext = document.getElementById("mode-text")
 const modeicon = document.getElementById("mode-icon");
@@ -118,6 +119,44 @@ function updateProfile(data) {
         noresult.style.display="block";
     }
 }   
+
+// swtich to dark mode
+
+function darkModeProperties() {
+    root.setProperty("--lm-bg", "#141D2F");
+    root.setProperty("--lm-bg-content", "#1E2A47");
+    root.setProperty("--lm-text", "white");
+    root.setProperty("--lm-text-alt", "white");
+    root.setProperty("--lm-shadow-xl", "rgba(70,88,109,0.15)");
+    modetext.innerText = "LIGHT";
+    modeicon.src = "image/sun-icon.svg";
+    root.setProperty("--lm-icon-bg", "brightness(1000%)");
+    darkMode = true;
+    console.log("darkmode changed to " + darkMode);
+    localStorage.setItem("dark-mode", true);  console.log("setting dark mode to false");
+  
+    console.log("setting dark mode to true");
+  
+  }
+
+  function lightModeProperties() {
+    root.setProperty("--lm-bg", "#F6F8FF");
+    root.setProperty("--lm-bg-content", "#FEFEFE");
+    root.setProperty("--lm-text", "#060606");
+    root.setProperty("--lm-text-alt", "#6e747d");
+    root.setProperty("--lm-shadow-xl", "rgba(70, 88, 109, 0.25)");
+    modetext.innerText = "DARK";
+    modeicon.src = "image/moon-icon.svg";
+    root.setProperty("--lm-icon-bg", "brightness(100%)");
+    darkMode = false;
+    console.log("darkmode changed to " + darkMode);
+  
+    localStorage.setItem("dark-mode", false);
+    console.log("setting dark mode to false");
+  }
+
+
+
 
 function init(){
     darkMode =false;
