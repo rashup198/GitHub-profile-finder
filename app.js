@@ -134,10 +134,8 @@ function darkModeProperties() {
     darkMode = true;
     console.log("darkmode changed to " + darkMode);
     localStorage.setItem("dark-mode", true);  console.log("setting dark mode to false");
-  
     console.log("setting dark mode to true");
-  
-  }
+ }
 
   function lightModeProperties() {
     root.setProperty("--lm-bg", "#F6F8FF");
@@ -150,7 +148,6 @@ function darkModeProperties() {
     root.setProperty("--lm-icon-bg", "brightness(100%)");
     darkMode = false;
     console.log("darkmode changed to " + darkMode);
-  
     localStorage.setItem("dark-mode", false);
     console.log("setting dark mode to false");
   }

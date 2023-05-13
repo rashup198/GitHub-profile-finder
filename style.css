@@ -78,7 +78,6 @@ header #btn-mode {
     display: flex;
     flex-direction: column;
     gap: 40px;
-
 }
 
 #btn-mode:hover {
@@ -188,8 +187,6 @@ header #btn-mode {
     justify-content: space-between;
     align-items: center;
     gap: 100px;
-
-
 }
 
 .profile-name h2 {
@@ -235,8 +232,6 @@ header #btn-mode {
     padding: 18px;
     justify-content: space-between;
     margin: 20px;
-
-
 }
 
 .stat-title {
@@ -266,9 +261,6 @@ header #btn-mode {
     display: flex;
     gap: 14px;
     align-items: center;
-
-
-
 }
 
 .profile-info a {
@@ -297,6 +289,6 @@ header #btn-mode {
     font-size: 17px;
     color: var(--lm-tex);
     font-family: monospace;
-color:#6e747d;
+
 }
 
