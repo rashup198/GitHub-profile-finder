@@ -1,5 +1,6 @@
 const searchbar = document.querySelector(".searchbar-container");
 const profilecontainer = document.querySelector(".profile-container");
+const user_Section=  document.getElementsByClassName("user-section")
 
 const url = "https://api.github.com/users/";
 const root = document.documentElement.style;
@@ -74,7 +75,7 @@ async function getuserdate(gitUrl) {
         console.log(data);
         updateProfile(data);
 
-    } catch (error) {
+    } catch (error) {           
         console.log("error found" + error);
 
     }
@@ -102,7 +103,7 @@ function updateProfile(data) {
         user.innerText = `@${data.login}`;
         datesegments = data.created_at.split("T").shift().split("-");
         date.innerText = `Joined ${datesegments[2]} ${months[datesegments[1] - 1]} ${datesegments[0]}`;
-        user.herf =`${data.html_url}`;
+        user.herf =`https://github.com/${data.login}`;
        
         bio.innerText= data.bio==null ? "This profile has no bio" : `${data.bio}`
         repos.innerText =`${data.public_repos}`;
@@ -110,10 +111,10 @@ function updateProfile(data) {
         followings .innerText =`${data.following}`;
         user_location.innerText =data.location==null ? "Not available" : `${data.location}`;
         page.innerText = data.blog==null ? "Not available" : `${data.blog}`;
-        page.herf = data.blog==null ?"#": `${data.blog}`;
+        page.herf = data.blog==null ?"#":`${data.blog}`;
 
         twitter.innerText=data.twitter_username==null ? "Not available" : `${data.twitter_username}`;
-        twitter.herf = data.twitter_username==null ?"#": `https://twitter.com/${data.twitter_username}`;
+        twitter.herf = data.twitter_username==null ?"#":`${data.twitter_username}`;
         company.innerText = data.company==null ?"Not available" : `${data.company}`;
         searchbar.classList.toggle("active");
         profilecontainer.classList.toggle("active");
