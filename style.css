@@ -294,10 +294,6 @@ header #btn-mode {
 
 }
 
-
-/* ------------------------------------------------------------------------- */
-
-
 /* share modal */
 
 .btn{
@@ -331,7 +327,6 @@ header #btn-mode {
   .modal-header {
     display: flex;
     margin-bottom: 25px;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 12px;
@@ -359,7 +354,7 @@ header #btn-mode {
     justify-content: center;
     transition: all 0.5s;
     margin-bottom: 25px;
-    text-decoration: none;
+
   }
   .icon img {
     height: 50px;
@@ -370,28 +365,16 @@ header #btn-mode {
     color: #1771e6;
     border: 1px solid #1771e6;
   }
-  #facebook:hover {
-    background-color: #1771e6;
-    color: #fff;
-  }
-  
+
   #twitter1 {
     color: #1c99e6;
     border: 1px solid #1c99e6;
   }
-  #twitter:hover {
-    background-color: #1c99e6;
-    color: #fff;
-  }
-  
   #instagram {
     color: #cb2770;
     border: 1px solid #cb2770;
   }
-  #instagram:hover {
-    background-color: #cb2770;
-    color: #fff;
-  }
+
   .at{
     cursor: pointer;
   }
@@ -400,20 +383,12 @@ header #btn-mode {
     color: #2fe664;
     border: 1px solid #2fe664;
   }
-  #whatsapp:hover {
-    background-color: #2fe664;
-    color: #fff;
-  }
   
   #telegram {
     color: #0081c2;
     border: 1px solid #0081c2;
   }
-  #telegram:hover {
-    background-color: #0081c2;
-    color: #fff;
-  }
-  
+
   .active {
     scale: 1;
   }

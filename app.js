@@ -219,7 +219,7 @@ const closeModal=()=>{
 //Telegram social share URL:
 // https://t.me/share/url?url={url}&text={text}
 // https://telegram.me/share/url?url={url}&text={text}
-// tg://msg_url?url={url}&text={text}
+//tg://msg_url?url={url}&text={text}
 
 
 function share(){
