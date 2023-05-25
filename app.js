@@ -27,6 +27,11 @@ const company = document.getElementById("company");
 const modal= document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 
+const facebookBtn = document.getElementById("facebook")
+const whatsappBtn = document.getElementById("whatsapp")
+const telegramBtn = document.getElementById("telegram")
+const twitterBtn = document.getElementById("twitter")
+
 let darkMode = false;
 
 
@@ -195,3 +200,40 @@ const closeModal=()=>{
     modal.classList.remove("active");
     overlay.classList.remove("overlayactive");
 };
+
+
+
+// social share link
+
+// whatsapp : 
+//  https://api.whatsapp.com/send?text=[post-title] [post-url]
+
+
+// Facebook social share URL: 
+// https://www.facebook.com/sharer.php?u=[post-url]
+
+
+// Twitter social share URL:
+// https://twitter.com/share?url=[post-url]&text=[post-title]&via=[via]&hashtags=[hashtags]
+
+//Telegram social share URL:
+// https://t.me/share/url?url={url}&text={text}
+// https://telegram.me/share/url?url={url}&text={text}
+// tg://msg_url?url={url}&text={text}
+
+
+function share(){
+    let postUrl = encodeURI(document.location.href);
+    let postTitle = encodeURI("Hello Eveyone Please Check this out");
+    console.log(postUrl);
+
+    facebookBtn.setAttribute("herf",`https://www.facebook.com/sharer.php?u=${postUrl}`)
+
+    whatsappBtn.setAttribute("herf",`https://api.whatsapp.com/send?text=${postTitle} ${postUrl}`)
+
+    twitterBtn.setAttribute("herf",`https://twitter.com/share?url=${postUrl}&text=${postTitle}`)
+
+    telegramBtn.setAttribute("herf",`https://t.me/share/url?url=${postUrl}&text=${postTitle}`)
+}
+
+share();
